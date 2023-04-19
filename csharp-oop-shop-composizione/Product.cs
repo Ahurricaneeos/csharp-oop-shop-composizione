@@ -55,7 +55,7 @@ namespace csharp_oop_shop_composizione
             string rapprStr = "Codice prodotto: " + this.codice + "\n";
             rapprStr += "Nome: " + this.nome + "\n";
             rapprStr += "Descrizione: " + this.descrizione + " ";
-            rapprStr += "Prezzo: " + this.PrezzoPlusIva();
+            rapprStr += "Prezzo: " + this.PrezzoPlusIva() + "\n";
             return rapprStr;
         }
     }

@@ -7,4 +7,10 @@ Product farina = new Product("Farina", "Farina 00", 0.89, 4);
 
 List<Product> prodottiSupermercato = new List<Product> { pane, latte, farina };
 
+supermercato.addProduct(pane);
+supermercato.addProduct(latte);
+supermercato.addProduct(farina);
+
+supermercato.addListProducts(prodottiSupermercato);
+
 Console.WriteLine(supermercato.StringShopRappresent());

@@ -41,7 +41,10 @@ namespace csharp_oop_shop_composizione
 
         // Methods
 
-        public void addProduct(Product newProduct) { products.Add(newProduct); }
+        public void addProduct(Product newProduct) 
+        { 
+            products.Add(newProduct); 
+        }
 
         public void addListProducts(List<Product> newListProducts)
         {
@@ -54,7 +57,7 @@ namespace csharp_oop_shop_composizione
             rapprStr += "Città: " + this.city + "\n";
             rapprStr += "Indirizzo: " + this.address + " ";
             rapprStr += this.civic + "\n";
-            rapprStr += "Prodotti disponibili: " + products;
+            rapprStr += "Prodotti disponibili: \n";
 
             foreach (Product scanProduct in products)
             {
