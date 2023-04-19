@@ -35,9 +35,9 @@ namespace csharp_oop_shop_composizione
 
         // Setters
 
-        public void SetCity(string city) { this.city = city;}
-        public void SetAddress(string address) {  this.address = address;}
-        public void SetCivic(int civic) { this.civic = civic;}
+        public void SetCity(string city) { this.city = city; }
+        public void SetAddress(string address) { this.address = address; }
+        public void SetCivic(int civic) { this.civic = civic; }
 
         // Methods
 
@@ -45,26 +45,22 @@ namespace csharp_oop_shop_composizione
 
         public void addListProducts(List<Product> newListProducts)
         {
-            foreach (Product newListProduct in newListProducts) { products.Add(newListProduct);}
+            foreach (Product newListProduct in newListProducts) { products.Add(newListProduct); }
         }
-        
-        public string stringRappresentation()
+
+        public string StringShopRappresent()
         {
             string rapprStr = "Nome negozio: " + this.name + "\n";
             rapprStr += "Città: " + this.city + "\n";
             rapprStr += "Indirizzo: " + this.address + " ";
-            rapprStr += "Numero civico: " + this.civic + "\n";
-​
+            rapprStr += this.civic + "\n";
+            rapprStr += "Prodotti disponibili: " + products;
+
             foreach (Product scanProduct in products)
             {
-                rapprStr += " - " + scanProduct.GetProducts() + "\n";
+                rapprStr += " - " + scanProduct.GetProductString() + "\n";
             }
-​
-            rapprStr += "\n";
-​
             return rapprStr;
         }
     }
-
-    
 }

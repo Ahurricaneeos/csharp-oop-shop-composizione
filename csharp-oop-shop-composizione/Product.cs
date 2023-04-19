@@ -50,35 +50,13 @@ namespace csharp_oop_shop_composizione
             return Iva;
         }
 
-        private string NomeEsteso()
+        public string GetProductString()
         {
-            string nomePiuCodice = codice + "-" + nome;
-            return nomePiuCodice;
-        }
-
-        public void StampaProdottiSenzaIva()
-        {
-            Console.WriteLine("Codice: " + codice);
-            Console.WriteLine("Nome prodotto: " + nome);
-            Console.WriteLine("Descrizione prodotto: " + descrizione);
-            Console.WriteLine("Prezzo: " + prezzo + "€");
-        }
-
-        public void StampaProdottiConIva()
-        {
-            Console.WriteLine("Codice: " + codice);
-            Console.WriteLine("Nome prodotto: " + nome);
-            Console.WriteLine("Descrizione prodotto: " + descrizione);
-            Console.WriteLine("IVA: " + iva + "%");
-            Console.WriteLine("Prezzo con iva: " + PrezzoPlusIva() + "€");
-        }
-
-        public void StampaProdottiConcatenati()
-        {
-            Console.WriteLine("Codice e nome del prodotto: " + NomeEsteso());
-            Console.WriteLine("Descrizione prodotto: " + descrizione);
-            Console.WriteLine("IVA: " + iva + "%");
-            Console.WriteLine("Prezzo con iva: " + PrezzoPlusIva() + "€");
+            string rapprStr = "Codice prodotto: " + this.codice + "\n";
+            rapprStr += "Nome: " + this.nome + "\n";
+            rapprStr += "Descrizione: " + this.descrizione + " ";
+            rapprStr += "Prezzo: " + this.PrezzoPlusIva();
+            return rapprStr;
         }
     }
 }
